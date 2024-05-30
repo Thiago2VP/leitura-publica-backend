@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 
 import homeRoutes from "./routes/home.js";
+import livrosRoutes from "./routes/livros.js";
 
 dotenv.config();
 
@@ -33,6 +34,7 @@ class App {
 
   routes() {
     this.app.use("/", homeRoutes);
+    this.app.use("/livros", livrosRoutes);
   }
 }
 
