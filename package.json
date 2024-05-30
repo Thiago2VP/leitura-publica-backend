@@ -1,0 +1,28 @@
+{
+  "name": "leitura-publica-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.3.0",
+    "nodemon": "^3.1.2",
+    "prettier": "3.2.5",
+    "sucrase": "^3.35.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0"
+  }
+}
