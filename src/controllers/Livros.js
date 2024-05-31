@@ -1,11 +1,21 @@
 import Livros from '../models/Livros.js'
 
 class LivrosController {
-  async getDBs(req, res) {
+  async testConnection(req, res) {
     try {
       const livros = new Livros();
-      const response = await livros.getdbs();
-      res.send(response);
+      await livros.testConnection();
+      res.status(200).send("Connection Success");
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async index(req, res) {
+    try {
+      const livros = new Livros();
+      const result = await livros.select();
+      res.status(200).send(result);
     } catch (e) {
       console.error(e);
     }
