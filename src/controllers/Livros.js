@@ -25,9 +25,9 @@ class LivrosController {
     try {
       const livros = new Livros();
 
-      const { nome, conteudo } = req.body;
+      const { nome, capa, conteudo } = req.body;
 
-      const result = await livros.insert({ nome, conteudo });
+      const result = await livros.insert({ nome, capa, conteudo });
 
       res.status(201).send(result);
     } catch (e) {
@@ -39,9 +39,9 @@ class LivrosController {
     try {
       const livros = new Livros();
 
-      const { nome, conteudo } = req.body;
+      const { nome, capa, conteudo } = req.body;
 
-      const result = await livros.update({ nome, conteudo }, req.params.name);
+      const result = await livros.update({ nome, capa, conteudo }, req.params.name);
 
       res.status(200).send(result);
     } catch (e) {
